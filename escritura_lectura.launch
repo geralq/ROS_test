@@ -1,0 +1,6 @@
+<launch>
+    <node name="listener_node" pkg="escritura_lectura_pkg" type="Subcriber.py" output="screen">
+    </node>
+    <node name="talker_node" pkg="escritura_lectura_pkg" type="Publisher.py" output="screen">
+    </node>
+</launch>
