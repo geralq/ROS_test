@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <launch>
-    <node name="talker" pkg="escritura_lectura_pkg" type="talker"/>
-    <node name="listener" pkg="escritura_lectura_pkg" type="listener"/>
+        <node name="escuchador" pkg="escritura_lectura_pkg" type="listener.py" output="screen" />
+        <node name="hablador" pkg="escritura_lectura_pkg" type="talker.py" output="screen" />
 </launch>
