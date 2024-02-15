@@ -1,4 +1,16 @@
 <launch>
-    <node name="listener_node" pkg="escritura_lectura_pkg" type="Subcriber.py" output="screen" />
-    <node name="talker_node" pkg="escritura_lectura_pkg" type="Publisher.py" output="screen" />
+
+    <group ns="Talker">
+        <node pkg="escritura_lectura_pkg" name="talker.py" type="escritura_lectura_node"/>
+    </group>
+
+    <group ns="Listener">
+        <node pkg="escritura_lectura_pkg" name="listener.py" type="escritura_lectura_node">
+    </group>
+
+    <node pkg="escritura_lectura_pkg" name="mimic" type="mimic">
+        <remap from="input" to="Talker/turtle1">
+        <remap from="input" to="Listener/turtle1">
+    </node>
+
 </launch>
