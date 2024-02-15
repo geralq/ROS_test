@@ -5,12 +5,12 @@
     </group>
 
     <group ns="Listener">
-        <node pkg="escritura_lectura_pkg" name="listener.py" type="escritura_lectura_node">
+        <node pkg="escritura_lectura_pkg" name="listener.py" type="escritura_lectura_node"/>
     </group>
 
     <node pkg="escritura_lectura_pkg" name="mimic" type="mimic">
-        <remap from="input" to="Talker/turtle1">
-        <remap from="input" to="Listener/turtle1">
+        <remap from="input" to="Talker/turtle1"/>
+        <remap from="input" to="Listener/turtle1"/>
     </node>
 
 </launch>
